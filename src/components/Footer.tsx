@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Instagram, Facebook, Twitter } from "lucide-react";
@@ -12,10 +11,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link to="/" className="font-serif text-3xl font-semibold tracking-tight text-terra-950">
-              Bella Italia
+              Wise Crax
             </Link>
             <p className="text-muted-foreground">
-              Authentic Italian cuisine made with love and tradition. Experience the true flavors of Italy.
+              Casual dining with quality food and a relaxed outdoor atmosphere. The perfect place to unwind and enjoy good company.
             </p>
             <div className="flex space-x-4">
               <a href="#" aria-label="Instagram" className="p-2 text-terra-700 hover:text-terra-900 transition-colors">
@@ -53,15 +52,15 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 text-terra-800" />
-                <span>123 Italian Street, Foodville, NY 10001</span>
+                <span>Highveld Shopping Centre, 19 Logan Ave, Highveld, Centurion, 0169</span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="mr-2 text-terra-800" />
-                <span>(123) 456-7890</span>
+                <span>069 414 1295</span>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-2 text-terra-800" />
-                <span>info@bellaitalia.com</span>
+                <span>info@wisecrax.co.za</span>
               </li>
             </ul>
           </div>
@@ -89,7 +88,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-olive-200 text-center text-sm text-muted-foreground">
-          <p>&copy; {year} Bella Italia. All rights reserved.</p>
+          <p>&copy; {year} Wise Crax. All rights reserved.</p>
         </div>
       </div>
     </footer>

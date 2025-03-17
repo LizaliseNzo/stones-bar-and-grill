@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -91,20 +90,22 @@ const ReservationPage = () => {
         >
           <h2 className="text-3xl md:text-4xl font-serif mb-4">Find Us</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            We're conveniently located in the heart of the city. Parking is available nearby, and we're also accessible by public transportation.
+            Wise Crax<br/>
+            Highveld Shopping Centre, 19 Logan Ave, Highveld, Centurion, 0169<br/>
+            Plenty of parking available at the shopping centre.
           </p>
         </motion.div>
 
         <div className="aspect-[16/9] w-full rounded-lg overflow-hidden shadow-md">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25903e411a773%3A0xb1dc5527b166ea3!2sPizza%20Restaurant!5e0!3m2!1sen!2sus!4v1659705514216!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3591.6880967818307!2d28.1818417!3d-25.8611951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956618eeaf5091%3A0x4cda42b3eb809b73!2sHighveld%20Shopping%20Centre%2C%2019%20Logan%20Ave%2C%20Highveld%2C%20Centurion%2C%200169!5e0!3m2!1sen!2sza!4v1710863437195!5m2!1sen!2sza"
             width="100%"
             height="100%"
             style={{ border: 0 }}
-            allowFullScreen
+            allowFullScreen={true}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Restaurant location"
+            title="Wise Crax location"
           ></iframe>
         </div>
       </section>

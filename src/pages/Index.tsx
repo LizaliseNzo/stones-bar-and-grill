@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -99,8 +98,8 @@ const Index = () => {
       </section>
 
       {/* Testimonial Section */}
-      <section className="section bg-olive-50 py-24">
-        <div className="container-custom">
+      <section className="section container-custom bg-olive-50 py-16 rounded-lg">
+        <div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -108,23 +107,26 @@ const Index = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <span className="inline-block px-3 py-1 bg-white text-olive-800 rounded-sm text-sm tracking-wide mb-4">
+            <span className="inline-block px-3 py-1 bg-olive-800 text-white rounded-sm text-sm tracking-wide mb-4">
               TESTIMONIALS
             </span>
             <h2 className="text-3xl md:text-4xl font-serif mb-4">What Our Customers Say</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Don't just take our word for it. Here's what some of our satisfied customers have to say about their dining experience.
+            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                text: "The most authentic Italian food I've had outside of Italy. The pasta is perfectly cooked, and the sauces are incredible. Feels like dining in Rome!",
-                author: "Maria Thomas",
-                role: "Food Blogger",
+                text: "The best Italian food I've had outside of Italy. The pasta is perfectly al dente and the sauces are incredibly flavorful. It's become our weekly date night spot!",
+                author: "Michael Rodriguez",
+                role: "Food Critic",
               },
               {
-                text: "The atmosphere is intimate and welcoming, and the service is impeccable. I've celebrated many special occasions here, and they always make it memorable.",
-                author: "James Wilson",
-                role: "Regular Customer",
+                text: "I hosted my anniversary dinner here and everything was perfect. The staff went above and beyond to make our night special. The tiramisu is to die for!",
+                author: "Emily Johnson",
+                role: "Local Resident",
               },
               {
                 text: "Their wood-fired pizzas are the real deal. Thin, crispy crust with the perfect amount of char. The margherita pizza is sublime in its simplicity.",
@@ -150,6 +152,65 @@ const Index = () => {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Events Section */}
+      <section className="section container-custom">
+        <div className="bg-terra-50 rounded-xl overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="p-8 md:p-12 flex flex-col justify-center"
+            >
+              <span className="inline-block px-3 py-1 bg-terra-100 text-terra-800 rounded-sm text-sm tracking-wide mb-4">
+                SPECIAL EVENTS
+              </span>
+              <h2 className="text-3xl md:text-4xl font-serif mb-4">Join Us For Fun Events</h2>
+              <p className="text-muted-foreground mb-6">
+                From our weekly Karaoke Night every Saturday to seasonal celebrations, there's always something exciting happening at Wise Crax. Come experience the best of Italian food and entertainment!
+              </p>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start">
+                  <div className="bg-terra-100 p-2 rounded mr-4">
+                    <span className="text-terra-800 font-medium">SAT</span>
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-lg">Karaoke Night</h3>
+                    <p className="text-sm text-muted-foreground">Every Saturday, 7:00 PM - 10:00 PM</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="bg-terra-100 p-2 rounded mr-4">
+                    <span className="text-terra-800 font-medium">1st</span>
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-lg">Wine Tasting</h3>
+                    <p className="text-sm text-muted-foreground">First Friday Monthly, 6:00 PM - 8:00 PM</p>
+                  </div>
+                </div>
+              </div>
+              <Link to="/events" className="btn-primary self-start">
+                View All Events
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="relative min-h-[300px] md:min-h-full"
+            >
+              <img
+                src="/images/events/karaoke.jpg"
+                alt="Karaoke night at Wise Crax"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </motion.div>
           </div>
         </div>
       </section>

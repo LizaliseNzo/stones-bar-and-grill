@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -18,18 +17,37 @@ const MenuPage = () => {
         className="pt-28 pb-12 md:pt-36 md:pb-20 bg-olive-50"
       >
         <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-center max-w-2xl mx-auto"
-          >
-            <h1 className="text-4xl md:text-5xl font-serif mb-6">Our Menu</h1>
-            <p className="text-lg text-muted-foreground">
-              Discover our authentic Italian dishes prepared with love and tradition. 
-              From hand-made pasta to wood-fired pizzas, every dish tells a story of Italy.
-            </p>
-          </motion.div>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            {/* Text Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="text-center md:text-left md:w-1/2"
+            >
+              <h1 className="text-4xl md:text-5xl font-serif mb-6">Our Menu</h1>
+              <p className="text-lg text-muted-foreground">
+                Discover our authentic dishes prepared with love and tradition. 
+                From hand-made calzones to wood-fired pizzas, every dish is crafted with care.
+              </p>
+            </motion.div>
+            
+            {/* Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="w-full md:w-1/2"
+            >
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="/images/menu/menu_hero.jpg" 
+                  alt="Delicious food from our menu" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </motion.section>
 
@@ -48,17 +66,8 @@ const MenuPage = () => {
             >
               <h2 className="text-3xl md:text-4xl font-serif mb-4">Special Dietary Requirements</h2>
               <p className="text-muted-foreground mb-6">
-                We understand that many guests have specific dietary needs. Our chefs are happy to accommodate vegetarian, 
-                vegan, gluten-free, and other dietary requirements. Please inform your server about any allergies or 
-                preferences when you visit.
+                We're happy to accommodate special dietary needs. Please inform your server about any allergies or dietary restrictions, and our chefs will prepare suitable options for you.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                {["Vegetarian", "Vegan Options", "Gluten-Free Options", "Nut-Free"].map((item, index) => (
-                  <div key={index} className="px-4 py-2 bg-white rounded-full text-olive-800 text-sm">
-                    {item}
-                  </div>
-                ))}
-              </div>
             </motion.div>
           </div>
         </div>

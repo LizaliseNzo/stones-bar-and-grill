@@ -6,6 +6,16 @@ import { motion } from "framer-motion";
 const GalleryPage = () => {
   // Array of image details with descriptions
   const [imageDetails, setImageDetails] = useState<Array<{src: string, description: string}>>([]);
+  const [loadErrors, setLoadErrors] = useState<Record<string, boolean>>({});
+
+  // Handle image load error
+  const handleImageError = (src: string) => {
+    setLoadErrors(prev => ({
+      ...prev,
+      [src]: true
+    }));
+    console.error(`Failed to load image: ${src}`);
+  };
 
   useEffect(() => {
     // Images are stored in public/images/gallery
@@ -31,8 +41,9 @@ const GalleryPage = () => {
       { file: "IMG_20211030_134030.jpg", description: "Each dish is artfully presented for a feast for the eyes and palate." },
     ];
     
+    // Properly encode image filenames and create image details
     setImageDetails(imageFiles.map(img => ({
-      src: `/images/gallery/${img.file}`,
+      src: `/images/gallery/${encodeURIComponent(img.file)}`,
       description: img.description
     })));
   }, []);
@@ -81,7 +92,14 @@ const GalleryPage = () => {
                   alt={`Gallery image ${index + 1}`}
                   className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
+                  onError={() => handleImageError(image.src)}
+                  style={{ display: loadErrors[image.src] ? 'none' : 'block' }}
                 />
+                {loadErrors[image.src] && (
+                  <div className="w-full h-64 bg-gray-200 flex items-center justify-center">
+                    <p className="text-gray-500">Image not available</p>
+                  </div>
+                )}
                 {/* Brown translucent overlay with description that appears on hover */}
                 <div className="absolute inset-0 bg-amber-900/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
                   <p className="text-white text-center font-medium text-sm md:text-base">

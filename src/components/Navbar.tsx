@@ -26,6 +26,18 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   const isActive = (path: string) => location.pathname === path;
+  const isHomePage = location.pathname === "/";
+  
+  // Determine text color based on page and scroll state
+  const getLinkClasses = (path: string) => {
+    return cn(
+      "nav-link", 
+      {
+        "active": isActive(path),
+        "text-gray-200": isHomePage && !scrolled, // Light gray on home when not scrolled
+      }
+    );
+  };
 
   return (
     <header
@@ -39,7 +51,10 @@ const Navbar = () => {
       <div className="container-custom flex items-center justify-between">
         <Link
           to="/"
-          className="font-serif text-2xl font-semibold tracking-tight text-terra-950 transition-opacity duration-300 hover:opacity-80"
+          className={cn(
+            "font-serif text-2xl font-semibold tracking-tight transition-opacity duration-300 hover:opacity-80",
+            isHomePage && !scrolled ? "text-white" : "text-terra-950"
+          )}
           aria-label="Home"
         >
           Bella Italia
@@ -49,40 +64,49 @@ const Navbar = () => {
         <nav className="hidden md:flex items-center space-x-8">
           <Link
             to="/"
-            className={cn("nav-link", isActive("/") && "active")}
+            className={getLinkClasses("/")}
             onClick={closeMenu}
           >
             Home
           </Link>
           <Link
             to="/menu"
-            className={cn("nav-link", isActive("/menu") && "active")}
+            className={getLinkClasses("/menu")}
             onClick={closeMenu}
           >
             Menu
           </Link>
           <Link
             to="/about"
-            className={cn("nav-link", isActive("/about") && "active")}
+            className={getLinkClasses("/about")}
             onClick={closeMenu}
           >
             About
           </Link>
           <Link
             to="/reservation"
-            className={cn("nav-link", isActive("/reservation") && "active")}
+            className={getLinkClasses("/reservation")}
             onClick={closeMenu}
           >
             Reservations
           </Link>
-          <Link to="/reservation" className="btn-primary">
+          <Link 
+            to="/reservation" 
+            className={cn(
+              "btn-primary",
+              isHomePage && !scrolled && "bg-white text-terra-800 hover:bg-gray-100"
+            )}
+          >
             Book a Table
           </Link>
         </nav>
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden text-foreground p-2 focus:outline-none"
+          className={cn(
+            "md:hidden p-2 focus:outline-none",
+            isHomePage && !scrolled ? "text-white" : "text-foreground"
+          )}
           onClick={toggleMenu}
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >

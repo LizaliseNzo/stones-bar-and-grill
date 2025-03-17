@@ -1,52 +1,100 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 
 const GalleryPage = () => {
-  // Array of image details with descriptions
-  const [imageDetails, setImageDetails] = useState<Array<{src: string, description: string}>>([]);
-  const [loadErrors, setLoadErrors] = useState<Record<string, boolean>>({});
+  // Array of gallery images with descriptions
+  const galleryImages = [
+    { 
+      src: "/images/gallery-new/2017-01-06.jpg", 
+      description: "Our signature wood-fired pizzas are made with the freshest ingredients and traditional techniques." 
+    },
+    { 
+      src: "/images/gallery-new/2017-09-09.jpg", 
+      description: "Enjoy our outdoor dining area, perfect for casual meals with friends and family." 
+    },
+    { 
+      src: "/images/gallery-new/2017-09-09 (1).jpg", 
+      description: "Our cozy outdoor seating provides a relaxed atmosphere for any occasion." 
+    },
+    { 
+      src: "/images/gallery-new/2018-10-11.jpg", 
+      description: "Indulge in our authentic Italian pasta dishes made with homemade sauces." 
+    },
+    { 
+      src: "/images/gallery-new/2021-02-10.jpg", 
+      description: "Our calzones are stuffed with premium ingredients and baked to perfection." 
+    },
+    { 
+      src: "/images/gallery-new/2021-04-18.jpg", 
+      description: "Try our selection of freshly prepared appetizers to start your meal." 
+    },
+    { 
+      src: "/images/gallery-new/2021-04-21.jpg", 
+      description: "Our desserts are made in-house daily for the perfect sweet ending." 
+    },
+    { 
+      src: "/images/gallery-new/2021-05-26.jpg", 
+      description: "Sample our wine selection, carefully curated to complement our menu." 
+    },
+    { 
+      src: "/images/gallery-new/20211107_132041.jpg", 
+      description: "Our specialty pizzas feature unique topping combinations for adventurous palates." 
+    },
+    { 
+      src: "/images/gallery-new/20211107_140530.jpg", 
+      description: "Join us for a memorable dining experience with authentic Italian flavors." 
+    },
+    { 
+      src: "/images/gallery-new/2023-05-14.jpg", 
+      description: "Our chefs prepare each dish with care, using traditional recipes." 
+    },
+    { 
+      src: "/images/gallery-new/2023-05-14 (1).jpg", 
+      description: "Family-style dining with generous portions to share with loved ones." 
+    },
+    { 
+      src: "/images/gallery-new/2024-03-22.jpg", 
+      description: "Our restaurant offers a warm, inviting atmosphere for casual dining." 
+    },
+    { 
+      src: "/images/gallery-new/2025-01-02.jpg", 
+      description: "Enjoy our handcrafted cocktails made with premium spirits and fresh ingredients." 
+    },
+    { 
+      src: "/images/gallery-new/2025-01-06.jpg", 
+      description: "Our pasta is made fresh daily for the ultimate authentic taste." 
+    },
+    { 
+      src: "/images/gallery-new/2025-03-15.jpg", 
+      description: "Weekend brunch options available with Italian-inspired breakfast dishes." 
+    },
+    { 
+      src: "/images/gallery-new/2025-03-15 (1).jpg", 
+      description: "Private dining areas available for special events and celebrations." 
+    },
+    { 
+      src: "/images/gallery-new/IMG_20211030_124413.jpg", 
+      description: "Our friendly staff is dedicated to providing exceptional service." 
+    },
+    { 
+      src: "/images/gallery-new/IMG_20211030_134030.jpg", 
+      description: "Each dish is artfully presented for a feast for the eyes and palate." 
+    },
+    { 
+      src: "/images/gallery-new/2025-01-26.png", 
+      description: "Explore our menu featuring a variety of authentic Italian dishes." 
+    }
+  ];
+
+  // State to track image loading errors
+  const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
 
   // Handle image load error
   const handleImageError = (src: string) => {
-    setLoadErrors(prev => ({
-      ...prev,
-      [src]: true
-    }));
-    console.error(`Failed to load image: ${src}`);
+    setFailedImages(prev => new Set(prev).add(src));
   };
-
-  useEffect(() => {
-    // Images are stored in public/images/gallery
-    const imageFiles = [
-      { file: "2017-01-06.jpg", description: "Our signature wood-fired pizzas are made with the freshest ingredients and traditional techniques." },
-      { file: "2017-09-09.jpg", description: "Enjoy our outdoor dining area, perfect for casual meals with friends and family." },
-      { file: "2017-09-09 (1).jpg", description: "Our cozy outdoor seating provides a relaxed atmosphere for any occasion." },
-      { file: "2018-10-11.jpg", description: "Indulge in our authentic Italian pasta dishes made with homemade sauces." },
-      { file: "2021-02-10.jpg", description: "Our calzones are stuffed with premium ingredients and baked to perfection." },
-      { file: "2021-04-18.jpg", description: "Try our selection of freshly prepared appetizers to start your meal." },
-      { file: "2021-04-21.jpg", description: "Our desserts are made in-house daily for the perfect sweet ending." },
-      { file: "2021-05-26.jpg", description: "Sample our wine selection, carefully curated to complement our menu." },
-      { file: "20211107_132041.jpg", description: "Our specialty pizzas feature unique topping combinations for adventurous palates." },
-      { file: "20211107_140530.jpg", description: "Join us for a memorable dining experience with authentic Italian flavors." },
-      { file: "2023-05-14.jpg", description: "Our chefs prepare each dish with care, using traditional recipes." },
-      { file: "2023-05-14 (1).jpg", description: "Family-style dining with generous portions to share with loved ones." },
-      { file: "2024-03-22.jpg", description: "Our restaurant offers a warm, inviting atmosphere for casual dining." },
-      { file: "2025-01-02.jpg", description: "Enjoy our handcrafted cocktails made with premium spirits and fresh ingredients." },
-      { file: "2025-01-06.jpg", description: "Our pasta is made fresh daily for the ultimate authentic taste." },
-      { file: "2025-03-15.jpg", description: "Weekend brunch options available with Italian-inspired breakfast dishes." },
-      { file: "2025-03-15 (1).jpg", description: "Private dining areas available for special events and celebrations." },
-      { file: "IMG_20211030_124413.jpg", description: "Our friendly staff is dedicated to providing exceptional service." },
-      { file: "IMG_20211030_134030.jpg", description: "Each dish is artfully presented for a feast for the eyes and palate." },
-    ];
-    
-    // Properly encode image filenames and create image details
-    setImageDetails(imageFiles.map(img => ({
-      src: `/images/gallery/${encodeURIComponent(img.file)}`,
-      description: img.description
-    })));
-  }, []);
 
   return (
     <div className="min-h-screen">
@@ -76,37 +124,37 @@ const GalleryPage = () => {
 
       {/* Gallery Section */}
       <section className="section container-custom">
-        <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-          {imageDetails.map((image, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {galleryImages.map((image, index) => (
             <motion.div 
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 % 0.5 }}
-              className="break-inside-avoid mb-4"
+              className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 relative group"
             >
-              <div className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 relative group">
-                <img 
-                  src={image.src} 
-                  alt={`Gallery image ${index + 1}`}
-                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                  onError={() => handleImageError(image.src)}
-                  style={{ display: loadErrors[image.src] ? 'none' : 'block' }}
-                />
-                {loadErrors[image.src] && (
-                  <div className="w-full h-64 bg-gray-200 flex items-center justify-center">
-                    <p className="text-gray-500">Image not available</p>
+              {!failedImages.has(image.src) ? (
+                <div className="aspect-square">
+                  <img 
+                    src={image.src} 
+                    alt={`Gallery image ${index + 1}`}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                    onError={() => handleImageError(image.src)}
+                  />
+                  {/* Brown translucent overlay with description that appears on hover */}
+                  <div className="absolute inset-0 bg-amber-900/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                    <p className="text-white text-center font-medium text-sm md:text-base">
+                      {image.description}
+                    </p>
                   </div>
-                )}
-                {/* Brown translucent overlay with description that appears on hover */}
-                <div className="absolute inset-0 bg-amber-900/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                  <p className="text-white text-center font-medium text-sm md:text-base">
-                    {image.description}
-                  </p>
                 </div>
-              </div>
+              ) : (
+                <div className="aspect-square bg-gray-200 flex items-center justify-center">
+                  <p className="text-gray-500">Image not available</p>
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
@@ -136,6 +184,6 @@ const GalleryPage = () => {
       <Footer />
     </div>
   );
-};
+}
 
 export default GalleryPage; 

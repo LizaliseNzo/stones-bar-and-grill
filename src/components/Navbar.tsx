@@ -62,6 +62,13 @@ const Navbar = () => {
             Menu
           </Link>
           <Link
+            to="/about"
+            className={cn("nav-link", isActive("/about") && "active")}
+            onClick={closeMenu}
+          >
+            About
+          </Link>
+          <Link
             to="/reservation"
             className={cn("nav-link", isActive("/reservation") && "active")}
             onClick={closeMenu}
@@ -110,6 +117,16 @@ const Navbar = () => {
             onClick={closeMenu}
           >
             Menu
+          </Link>
+          <Link
+            to="/about"
+            className={cn(
+              "text-lg nav-link",
+              isActive("/about") && "active"
+            )}
+            onClick={closeMenu}
+          >
+            About
           </Link>
           <Link
             to="/reservation"

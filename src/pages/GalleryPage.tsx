@@ -10,21 +10,23 @@ const GalleryPage = () => {
   useEffect(() => {
     // Images are stored in public/images/gallery
     const imageFiles = [
-      { file: "2017-01-06.jpg", description: "Enjoy our authentic Italian pasta made with fresh ingredients and traditional recipes." },
-      { file: "2017-09-09 (1).jpg", description: "Our cozy dining atmosphere is perfect for intimate dinners and special occasions." },
-      { file: "2017-09-09.jpg", description: "Fresh wood-fired pizzas made in our traditional brick oven." },
-      { file: "2018-10-11.jpg", description: "Indulge in our signature tiramisu, a perfect blend of coffee and mascarpone." },
-      { file: "2021-02-10.jpg", description: "A selection of fine Italian wines to complement your meal." },
-      { file: "2021-04-18.jpg", description: "Family-style dining with generous portions to share with loved ones." },
-      { file: "2021-04-21.jpg", description: "Our talented chefs prepare each dish with care and precision." },
-      { file: "2021-05-26.jpg", description: "Experience our seasonal menu featuring the freshest local ingredients." },
-      { file: "20211107_132041.jpg", description: "Our homemade bread is baked fresh daily and served warm." },
+      { file: "2017-01-06.jpg", description: "Our signature wood-fired pizzas are made with the freshest ingredients and traditional techniques." },
+      { file: "2017-09-09.jpg", description: "Enjoy our outdoor dining area, perfect for casual meals with friends and family." },
+      { file: "2017-09-09 (1).jpg", description: "Our cozy outdoor seating provides a relaxed atmosphere for any occasion." },
+      { file: "2018-10-11.jpg", description: "Indulge in our authentic Italian pasta dishes made with homemade sauces." },
+      { file: "2021-02-10.jpg", description: "Our calzones are stuffed with premium ingredients and baked to perfection." },
+      { file: "2021-04-18.jpg", description: "Try our selection of freshly prepared appetizers to start your meal." },
+      { file: "2021-04-21.jpg", description: "Our desserts are made in-house daily for the perfect sweet ending." },
+      { file: "2021-05-26.jpg", description: "Sample our wine selection, carefully curated to complement our menu." },
+      { file: "20211107_132041.jpg", description: "Our specialty pizzas feature unique topping combinations for adventurous palates." },
       { file: "20211107_140530.jpg", description: "Join us for a memorable dining experience with authentic Italian flavors." },
-      { file: "2023-05-14 (1).jpg", description: "Outdoor seating available to enjoy your meal in the fresh air." },
-      { file: "2023-05-14.jpg", description: "Celebrate special occasions with our private dining options." },
-      { file: "2024-03-22.jpg", description: "Handcrafted cocktails made with premium spirits and fresh ingredients." },
-      { file: "2025-01-02.jpg", description: "Our pasta is made in-house daily for the ultimate fresh taste." },
-      { file: "2025-01-06.jpg", description: "Enjoy the warm, inviting atmosphere of our restaurant." },
+      { file: "2023-05-14.jpg", description: "Our chefs prepare each dish with care, using traditional recipes." },
+      { file: "2023-05-14 (1).jpg", description: "Family-style dining with generous portions to share with loved ones." },
+      { file: "2024-03-22.jpg", description: "Our restaurant offers a warm, inviting atmosphere for casual dining." },
+      { file: "2025-01-02.jpg", description: "Enjoy our handcrafted cocktails made with premium spirits and fresh ingredients." },
+      { file: "2025-01-06.jpg", description: "Our pasta is made fresh daily for the ultimate authentic taste." },
+      { file: "2025-03-15.jpg", description: "Weekend brunch options available with Italian-inspired breakfast dishes." },
+      { file: "2025-03-15 (1).jpg", description: "Private dining areas available for special events and celebrations." },
       { file: "IMG_20211030_124413.jpg", description: "Our friendly staff is dedicated to providing exceptional service." },
       { file: "IMG_20211030_134030.jpg", description: "Each dish is artfully presented for a feast for the eyes and palate." },
     ];
@@ -55,7 +57,7 @@ const GalleryPage = () => {
           >
             <h1 className="text-4xl md:text-5xl font-serif mb-6">Our Gallery</h1>
             <p className="text-lg text-muted-foreground">
-              Take a visual journey through our restaurant's atmosphere, delicious dishes, and memorable moments.
+              Take a visual journey through Wise Crax's atmosphere, delicious dishes, and memorable moments.
             </p>
           </motion.div>
         </div>
@@ -107,7 +109,7 @@ const GalleryPage = () => {
             </span>
             <h2 className="text-3xl md:text-4xl font-serif mb-4">Share Your Experience</h2>
             <p className="text-muted-foreground">
-              Tag us on social media with #BellaItaliaMemories and your photo might be featured in our gallery!
+              Tag us on social media with #WiseCraxMemories and your photo might be featured in our gallery!
             </p>
           </motion.div>
         </div>

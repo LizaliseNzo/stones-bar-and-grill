@@ -11,7 +11,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
   const [imageError, setImageError] = useState(false);
   
   // Choose a fallback image if the original image fails to load
-  const fallbackImage = "/stons bar and grill images/2025-01-27.jpg";
+  const fallbackImage = "/images/stones-gallery/2025-01-27.jpg";
   
   return (
     <motion.div

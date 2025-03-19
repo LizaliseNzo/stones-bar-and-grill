@@ -42,8 +42,6 @@ dist-ssr
 *.sw?
 
 # Folders with problematic long filenames
-wise crax images/
-stons bar and grill images/
 
 # Add the folders to public without the long filenames
 !public/images

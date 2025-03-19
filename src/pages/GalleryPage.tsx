@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 const GalleryPage = () => {
   // Array of gallery images with descriptions
   const galleryImages = [
+    // Stone's Bar and Grill images
     { 
       src: "/images/gallery/2022-02-06.jpg", 
       description: "Our cozy interior creates the perfect ambiance for a memorable dining experience." 
@@ -38,6 +39,38 @@ const GalleryPage = () => {
       src: "/images/gallery/2022-04-30.jpg", 
       description: "Weekend events bring our community together for good times and great food." 
     },
+    
+    // Wise Crax images
+    {
+      src: "/images/crax/2017-01-06.jpg",
+      description: "Throwback to 2017 - When our journey began with great food and community."
+    },
+    {
+      src: "/images/crax/2018-10-11.jpg",
+      description: "Fall gatherings are always special at our restaurant."
+    },
+    {
+      src: "/images/crax/2021-02-10.jpg",
+      description: "Winter ambiance with our warm and inviting interior design."
+    },
+    {
+      src: "/images/crax/2021-04-18.jpg",
+      description: "Spring celebrations call for special menu items and decorations."
+    },
+    {
+      src: "/images/crax/2023-05-14.jpg",
+      description: "Mother's Day special event - Creating memories with families."
+    },
+    {
+      src: "/images/crax/2025-01-02.jpg",
+      description: "New Year celebrations with our special holiday menu."
+    },
+    {
+      src: "/images/crax/IMG_20211030_124413.jpg",
+      description: "Halloween themed dishes and decorations for a festive experience."
+    },
+    
+    // More Stone's Bar and Grill images
     { 
       src: "/images/gallery/unnamed-2.jpg", 
       description: "The bar area - where our skilled bartenders craft your favorite drinks." 

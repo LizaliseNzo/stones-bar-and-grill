@@ -64,7 +64,7 @@ const Navbar = () => {
             aria-label="Stones Bar and Grill - Home"
           >
             <img 
-              src="/stons bar and grill images/2021-08-08.jpg" 
+              src="/images/stones-gallery/2021-08-08.jpg" 
               alt="Stones Bar and Grill Logo" 
               className="h-16 w-auto rounded-full object-cover border-3 border-orange-500"
             />
@@ -140,7 +140,7 @@ const Navbar = () => {
         <div className="h-full flex flex-col items-center justify-center">
           <div className="mb-6">
             <img 
-              src="/stons bar and grill images/2021-08-08.jpg" 
+              src="/images/stones-gallery/2021-08-08.jpg" 
               alt="Stones Bar and Grill Logo" 
               className="h-20 w-auto rounded-full object-cover border-2 border-orange-500"
             />

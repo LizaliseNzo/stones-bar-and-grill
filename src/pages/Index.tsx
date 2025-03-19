@@ -82,7 +82,7 @@ const Index = () => {
             <div className="relative">
               <div className="aspect-[4/3] rounded-lg overflow-hidden border border-orange-900/30">
                 <img
-                  src="/stons bar and grill images/2021-06-27.jpg"
+                  src="/images/stones-gallery/2021-06-27.jpg"
                   alt="Stones Bar and Grill chef"
                   className="w-full h-full object-cover"
                 />
@@ -205,7 +205,7 @@ const Index = () => {
               className="relative min-h-[300px] md:min-h-full"
             >
               <img
-                src="/stons bar and grill images/2021-12-08 (2).jpg"
+                src="/images/stones-gallery/2021-12-08-2.jpg"
                 alt="Karaoke night at Stones Bar and Grill"
                 className="absolute inset-0 w-full h-full object-cover"
               />
@@ -229,7 +229,7 @@ const Index = () => {
             </div>
             <div className="hidden md:flex justify-end">
               <img
-                src="/stons bar and grill images/2021-12-23.jpg"
+                src="/images/stones-food/2021-12-23.jpg"
                 alt="Restaurant interior"
                 className="w-full max-w-md rounded-lg border border-orange-900/40"
               />

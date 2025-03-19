@@ -42,11 +42,11 @@ dist-ssr
 *.sw?
 
 # Allow local image folders for development
-# wise crax images/
 # stons bar and grill images/
 
 # Add the folders to public without the long filenames
 !public/images
+!public/wise crax images/
 
 # Google Search files with long filenames
 /public/images/gallery/wise crax - Google Search*

@@ -6,101 +6,68 @@ import Footer from "@/components/Footer";
 const GalleryPage = () => {
   // Array of gallery images with descriptions
   const galleryImages = [
-    // Stone's Bar and Grill images
     { 
-      src: "/images/gallery/2022-02-06.jpg", 
+      src: "/stons bar and grill images/2022-02-06.jpg", 
       description: "Our cozy interior creates the perfect ambiance for a memorable dining experience." 
     },
     { 
-      src: "/images/gallery/IMG_20220119_193951.jpg", 
+      src: "/stons bar and grill images/IMG_20220119_193951.jpg", 
       description: "Evening atmosphere with perfect lighting sets the mood for a great night out." 
     },
     { 
-      src: "/images/gallery/20220430_201301.jpg", 
+      src: "/stons bar and grill images/20220430_201301.jpg", 
       description: "Live music nights at Stones Bar and Grill - join us for entertainment and great food." 
     },
     { 
-      src: "/images/gallery/unnamed-3.jpg", 
+      src: "/stons bar and grill images/unnamed (3).jpg", 
       description: "Casual yet elegant setting for your special celebrations and everyday dining." 
     },
     { 
-      src: "/images/gallery/2021-12-08.jpg", 
+      src: "/stons bar and grill images/2021-12-08.jpg", 
       description: "Friends gathering for drinks and meals - creating memories that last." 
     },
     { 
-      src: "/images/gallery/restaurant-outside-2.jpg", 
+      src: "/stons bar and grill images/restaurant outside 2.jpg", 
       description: "Our welcoming exterior invites you to step in and experience Stones Bar and Grill." 
     },
     { 
-      src: "/images/gallery/IMG_20220408_120643_edit_103540231784721.jpg", 
+      src: "/stons bar and grill images/IMG_20220408_120643_edit_103540231784721.jpg", 
       description: "Sunny days at our outdoor seating area - perfect for brunch with friends." 
     },
     { 
-      src: "/images/gallery/2022-04-30.jpg", 
+      src: "/stons bar and grill images/2022-04-30.jpg", 
       description: "Weekend events bring our community together for good times and great food." 
     },
-    
-    // Wise Crax images
-    {
-      src: "/images/crax/2017-01-06.jpg",
-      description: "Throwback to 2017 - When our journey began with great food and community."
-    },
-    {
-      src: "/images/crax/2018-10-11.jpg",
-      description: "Fall gatherings are always special at our restaurant."
-    },
-    {
-      src: "/images/crax/2021-02-10.jpg",
-      description: "Winter ambiance with our warm and inviting interior design."
-    },
-    {
-      src: "/images/crax/2021-04-18.jpg",
-      description: "Spring celebrations call for special menu items and decorations."
-    },
-    {
-      src: "/images/crax/2023-05-14.jpg",
-      description: "Mother's Day special event - Creating memories with families."
-    },
-    {
-      src: "/images/crax/2025-01-02.jpg",
-      description: "New Year celebrations with our special holiday menu."
-    },
-    {
-      src: "/images/crax/IMG_20211030_124413.jpg",
-      description: "Halloween themed dishes and decorations for a festive experience."
-    },
-    
-    // More Stone's Bar and Grill images
     { 
-      src: "/images/gallery/unnamed-2.jpg", 
+      src: "/stons bar and grill images/unnamed (2).jpg", 
       description: "The bar area - where our skilled bartenders craft your favorite drinks." 
     },
     { 
-      src: "/images/gallery/unnamed-1.jpg", 
+      src: "/stons bar and grill images/unnamed (1).jpg", 
       description: "Indoor seating designed for comfort while you enjoy our menu selections." 
     },
     { 
-      src: "/images/gallery/unnamed.jpg", 
+      src: "/stons bar and grill images/unnamed.jpg", 
       description: "Catch the game with friends on our big screens while enjoying our famous appetizers." 
     },
     { 
-      src: "/images/gallery/2023-06-23-3.jpg", 
+      src: "/stons bar and grill images/2023-06-23 (3).jpg", 
       description: "Evening gatherings at Stones - where great conversations happen." 
     },
     { 
-      src: "/images/gallery/2023-06-23-2.jpg", 
+      src: "/stons bar and grill images/2023-06-23 (2).jpg", 
       description: "Our carefully designed space combines comfort with style." 
     },
     { 
-      src: "/images/gallery/2023-06-23-1.jpg", 
+      src: "/stons bar and grill images/2023-06-23 (1).jpg", 
       description: "The perfect spot for after-work drinks and appetizers with colleagues." 
     },
     { 
-      src: "/images/gallery/2023-06-23.jpg", 
+      src: "/stons bar and grill images/2023-06-23.jpg", 
       description: "Every detail of our interior is designed to enhance your dining experience." 
     },
     { 
-      src: "/images/gallery/2022-06-27.jpg", 
+      src: "/stons bar and grill images/2022-06-27.jpg", 
       description: "Weekend brunches at Stones - a local favorite tradition." 
     }
   ];

@@ -41,7 +41,9 @@ dist-ssr
 *.sln
 *.sw?
 
-# Folders with problematic long filenames
+# Allow local image folders for development
+# wise crax images/
+# stons bar and grill images/
 
 # Add the folders to public without the long filenames
 !public/images

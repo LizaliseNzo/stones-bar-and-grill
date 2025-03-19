@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { format } from "date-fns";
@@ -70,7 +69,7 @@ const Reservation = () => {
   };
 
   return (
-    <section className="section container-custom">
+    <section className="section container-custom pt-32 md:pt-40">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -79,8 +78,8 @@ const Reservation = () => {
         className="max-w-3xl mx-auto"
       >
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-serif mb-4">Reserve a Table</h2>
-          <p className="text-muted-foreground">
+          <h2 className="text-3xl md:text-4xl font-serif mb-4 text-orange-500">Reserve a Table</h2>
+          <p className="text-orange-200">
             Book your dining experience with us. For larger parties or special events, please call us directly.
           </p>
         </div>
@@ -250,7 +249,7 @@ const Reservation = () => {
 
             <Button 
               type="submit" 
-              className="w-full bg-terra-800 hover:bg-terra-900 text-white"
+              className="w-full btn-primary"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Processing..." : "Book Table"}

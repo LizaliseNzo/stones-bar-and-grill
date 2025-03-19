@@ -1,90 +1,74 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { motion } from "framer-motion";
 
 const GalleryPage = () => {
   // Array of gallery images with descriptions
   const galleryImages = [
     { 
-      src: "/images/gallery-new/2017-01-06.jpg", 
-      description: "Our signature wood-fired pizzas are made with the freshest ingredients and traditional techniques." 
+      src: "/stons bar and grill images/2022-02-06.jpg", 
+      description: "Our cozy interior creates the perfect ambiance for a memorable dining experience." 
     },
     { 
-      src: "/images/gallery-new/2017-09-09.jpg", 
-      description: "Enjoy our outdoor dining area, perfect for casual meals with friends and family." 
+      src: "/stons bar and grill images/IMG_20220119_193951.jpg", 
+      description: "Evening atmosphere with perfect lighting sets the mood for a great night out." 
     },
     { 
-      src: "/images/gallery-new/2017-09-09 (1).jpg", 
-      description: "Our cozy outdoor seating provides a relaxed atmosphere for any occasion." 
+      src: "/stons bar and grill images/20220430_201301.jpg", 
+      description: "Live music nights at Stones Bar and Grill - join us for entertainment and great food." 
     },
     { 
-      src: "/images/gallery-new/2018-10-11.jpg", 
-      description: "Indulge in our authentic Italian pasta dishes made with homemade sauces." 
+      src: "/stons bar and grill images/unnamed (3).jpg", 
+      description: "Casual yet elegant setting for your special celebrations and everyday dining." 
     },
     { 
-      src: "/images/gallery-new/2021-02-10.jpg", 
-      description: "Our calzones are stuffed with premium ingredients and baked to perfection." 
+      src: "/stons bar and grill images/2021-12-08.jpg", 
+      description: "Friends gathering for drinks and meals - creating memories that last." 
     },
     { 
-      src: "/images/gallery-new/2021-04-18.jpg", 
-      description: "Try our selection of freshly prepared appetizers to start your meal." 
+      src: "/stons bar and grill images/restaurant outside 2.jpg", 
+      description: "Our welcoming exterior invites you to step in and experience Stones Bar and Grill." 
     },
     { 
-      src: "/images/gallery-new/2021-04-21.jpg", 
-      description: "Our desserts are made in-house daily for the perfect sweet ending." 
+      src: "/stons bar and grill images/IMG_20220408_120643_edit_103540231784721.jpg", 
+      description: "Sunny days at our outdoor seating area - perfect for brunch with friends." 
     },
     { 
-      src: "/images/gallery-new/2021-05-26.jpg", 
-      description: "Sample our wine selection, carefully curated to complement our menu." 
+      src: "/stons bar and grill images/2022-04-30.jpg", 
+      description: "Weekend events bring our community together for good times and great food." 
     },
     { 
-      src: "/images/gallery-new/20211107_132041.jpg", 
-      description: "Our specialty pizzas feature unique topping combinations for adventurous palates." 
+      src: "/stons bar and grill images/unnamed (2).jpg", 
+      description: "The bar area - where our skilled bartenders craft your favorite drinks." 
     },
     { 
-      src: "/images/gallery-new/20211107_140530.jpg", 
-      description: "Join us for a memorable dining experience with authentic Italian flavors." 
+      src: "/stons bar and grill images/unnamed (1).jpg", 
+      description: "Indoor seating designed for comfort while you enjoy our menu selections." 
     },
     { 
-      src: "/images/gallery-new/2023-05-14.jpg", 
-      description: "Our chefs prepare each dish with care, using traditional recipes." 
+      src: "/stons bar and grill images/unnamed.jpg", 
+      description: "Catch the game with friends on our big screens while enjoying our famous appetizers." 
     },
     { 
-      src: "/images/gallery-new/2023-05-14 (1).jpg", 
-      description: "Family-style dining with generous portions to share with loved ones." 
+      src: "/stons bar and grill images/2023-06-23 (3).jpg", 
+      description: "Evening gatherings at Stones - where great conversations happen." 
     },
     { 
-      src: "/images/gallery-new/2024-03-22.jpg", 
-      description: "Our restaurant offers a warm, inviting atmosphere for casual dining." 
+      src: "/stons bar and grill images/2023-06-23 (2).jpg", 
+      description: "Our carefully designed space combines comfort with style." 
     },
     { 
-      src: "/images/gallery-new/2025-01-02.jpg", 
-      description: "Enjoy our handcrafted cocktails made with premium spirits and fresh ingredients." 
+      src: "/stons bar and grill images/2023-06-23 (1).jpg", 
+      description: "The perfect spot for after-work drinks and appetizers with colleagues." 
     },
     { 
-      src: "/images/gallery-new/2025-01-06.jpg", 
-      description: "Our pasta is made fresh daily for the ultimate authentic taste." 
+      src: "/stons bar and grill images/2023-06-23.jpg", 
+      description: "Every detail of our interior is designed to enhance your dining experience." 
     },
     { 
-      src: "/images/gallery-new/2025-03-15.jpg", 
-      description: "Weekend brunch options available with Italian-inspired breakfast dishes." 
-    },
-    { 
-      src: "/images/gallery-new/2025-03-15 (1).jpg", 
-      description: "Private dining areas available for special events and celebrations." 
-    },
-    { 
-      src: "/images/gallery-new/IMG_20211030_124413.jpg", 
-      description: "Our friendly staff is dedicated to providing exceptional service." 
-    },
-    { 
-      src: "/images/gallery-new/IMG_20211030_134030.jpg", 
-      description: "Each dish is artfully presented for a feast for the eyes and palate." 
-    },
-    { 
-      src: "/images/gallery-new/2025-01-26.png", 
-      description: "Explore our menu featuring a variety of authentic Italian dishes." 
+      src: "/stons bar and grill images/2022-06-27.jpg", 
+      description: "Weekend brunches at Stones - a local favorite tradition." 
     }
   ];
 
@@ -105,7 +89,7 @@ const GalleryPage = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="pt-28 pb-12 md:pt-36 md:pb-20 bg-olive-50"
+        className="pt-28 pb-12 md:pt-36 md:pb-20 bg-black border-b border-orange-900/30"
       >
         <div className="container-custom">
           <motion.div
@@ -114,9 +98,9 @@ const GalleryPage = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-center max-w-2xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-serif mb-6">Our Gallery</h1>
-            <p className="text-lg text-muted-foreground">
-              Take a visual journey through Wise Crax's atmosphere, delicious dishes, and memorable moments.
+            <h1 className="text-4xl md:text-5xl font-serif mb-6 text-orange-500">Our Gallery</h1>
+            <p className="text-lg text-orange-200">
+              Take a visual journey through Stones Bar and Grill's welcoming atmosphere, vibrant ambiance, and memorable moments.
             </p>
           </motion.div>
         </div>
@@ -144,8 +128,8 @@ const GalleryPage = () => {
                     onError={() => handleImageError(image.src)}
                   />
                   {/* Brown translucent overlay with description that appears on hover */}
-                  <div className="absolute inset-0 bg-amber-900/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                    <p className="text-white text-center font-medium text-sm md:text-base">
+                  <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 border border-orange-600/40">
+                    <p className="text-orange-300 text-center font-medium text-sm md:text-base">
                       {image.description}
                     </p>
                   </div>
@@ -161,7 +145,7 @@ const GalleryPage = () => {
       </section>
 
       {/* Customer Photos Section */}
-      <section className="section bg-olive-50">
+      <section className="section bg-black border-t border-orange-900/30">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -170,12 +154,12 @@ const GalleryPage = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-16 max-w-2xl mx-auto"
           >
-            <span className="inline-block px-3 py-1 bg-terra-100 text-terra-800 rounded-sm text-sm tracking-wide mb-4">
+            <span className="inline-block px-3 py-1 bg-orange-600 text-black font-semibold rounded-sm text-sm tracking-wide mb-4">
               MEMORIES
             </span>
-            <h2 className="text-3xl md:text-4xl font-serif mb-4">Share Your Experience</h2>
-            <p className="text-muted-foreground">
-              Tag us on social media with #WiseCraxMemories and your photo might be featured in our gallery!
+            <h2 className="text-3xl md:text-4xl font-serif mb-4 text-orange-500">Share Your Experience</h2>
+            <p className="text-orange-200">
+              Tag us on social media with #StonesBarAndGrillMemories and your photo might be featured in our gallery!
             </p>
           </motion.div>
         </div>

@@ -1,5 +1,4 @@
-
-import React from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { type MenuItem as MenuItemType } from "@/assets/data";
 import { Badge } from "@/components/ui/badge";
@@ -9,6 +8,11 @@ interface MenuItemProps {
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
+  const [imageError, setImageError] = useState(false);
+  
+  // Choose a fallback image if the original image fails to load
+  const fallbackImage = "/stons bar and grill images/2025-01-27.jpg";
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -18,9 +22,11 @@ const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
       className="card group overflow-hidden"
     >
       <div className="relative overflow-hidden aspect-[4/3]">
-        <div
-          className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-          style={{ backgroundImage: `url(${item.image})` }}
+        <img
+          src={imageError ? fallbackImage : item.image}
+          alt={item.name}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          onError={() => setImageError(true)}
         />
         <div className="absolute top-3 left-3 flex flex-wrap gap-2">
           {item.popular && (

@@ -1,8 +1,8 @@
-
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { menuItems, categories } from "@/assets/data";
-import MenuItem from "./MenuItem";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
+import { menuItems, categories } from '@/assets/data';
+import MenuItem from '@/components/MenuItem';
 
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -22,7 +22,7 @@ const Menu = () => {
       >
         <h2 className="text-3xl md:text-4xl font-serif mb-4">Our Menu</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Discover our authentic Italian dishes made with the finest ingredients and traditional recipes.
+          Discover our delicious dishes made with the finest ingredients and traditional recipes.
         </p>
       </motion.div>
 

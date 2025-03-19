@@ -1,69 +1,75 @@
-# Welcome to your Lovable project
+# Stones Bar and Grill
 
-## Project info
+A modern, responsive website for Stones Bar and Grill, a restaurant and bar located in Pretoria, South Africa. The website showcases the restaurant's menu, gallery, events, and reservation system.
 
-**URL**: https://lovable.dev/projects/1503367f-48c9-49c6-b692-d9d55bcf5571
+## Features
 
-## How can I edit this code?
+- **Modern UI Design**: Built with a sleek orange and black theme
+- **Responsive Layout**: Fully mobile-responsive for all device types
+- **Menu Page**: Interactive menu with categories like burgers, grill, appetizers, etc.
+- **Gallery**: Visual showcase of the restaurant's atmosphere and food
+- **Events Page**: Information about regular and special events
+- **Reservation System**: Online booking system for customers
+- **Location and Contact**: Map integration and contact information
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **React**: Frontend framework
+- **TypeScript**: Type-safe JavaScript
+- **Tailwind CSS**: Utility-first CSS framework
+- **Framer Motion**: Animations and transitions
+- **React Router**: Page routing
+- **React Hook Form**: Form handling
+- **Zod**: Form validation
+- **Shadcn UI**: UI component library
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1503367f-48c9-49c6-b692-d9d55bcf5571) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (v16.0.0 or higher)
+- npm or yarn
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/LizaliseNzo/stones-bar-and-grill.git
+   cd stones-bar-and-grill
+   ```
 
-Follow these steps:
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+4. Open your browser and navigate to `http://localhost:5173`
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Project Structure
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- `src/`: Source code
+  - `components/`: Reusable components
+  - `pages/`: Page components
+  - `assets/`: Static assets and data
+  - `lib/`: Utility functions
+  - `hooks/`: Custom React hooks
 
-**Edit a file directly in GitHub**
+## License
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-**Use GitHub Codespaces**
+## Contact
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/1503367f-48c9-49c6-b692-d9d55bcf5571) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+For inquiries about the restaurant:
+- **Address**: Corner Soutpansberg and, Steve Biko Rd, Prinshof, Pretoria, 0028
+- **Phone**: 012 001 7950
+- **Email**: info@stonesbarandgrill.co.za
